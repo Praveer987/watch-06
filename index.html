@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0a11" />
+    <meta name="description" content="Watch Anime 06 is your place to discover anime, explore trailers, and find where to watch your favorites." />
+    <title>Watch Anime 06 | Discover Your Next Favorite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <button class="brand" data-action="nav" data-view="Discover" aria-label="Watch Anime 06 home">
+          <span class="brand-mark" data-icon="play"></span>
+          <span>WATCH<span class="brand-accent">ANIME</span><b>06</b></span>
+        </button>
+        <nav class="desktop-nav" aria-label="Main navigation" id="desktop-nav">
+          <button data-action="nav" data-view="Discover" class="nav-active">Discover</button>
+          <button data-action="nav" data-view="Browse">Browse</button>
+          <button data-action="nav" data-view="My List">My List</button>
+        </nav>
+        <div class="header-actions">
+          <div class="header-search" id="header-search">
+            <span data-icon="search" data-size="18"></span>
+            <input id="search-input" type="search" placeholder="Search anime..." aria-label="Search anime" autocomplete="off" />
+            <button id="clear-search" data-action="clear-search" aria-label="Clear search" hidden><span data-icon="x" data-size="15"></span></button>
+            <kbd>/</kbd>
+          </div>
+          <button class="icon-search" data-action="mobile-search" aria-label="Search"><span data-icon="search" data-size="21"></span></button>
+          <button class="mobile-menu-button" data-action="mobile-menu" aria-label="Open menu"><span id="menu-icon" data-icon="menu" data-size="23"></span></button>
+        </div>
+        <nav class="mobile-nav" id="mobile-nav" hidden>
+          <button data-action="nav" data-view="Discover">Discover</button>
+          <button data-action="nav" data-view="Browse">Browse</button>
+          <button data-action="nav" data-view="My List">My List</button>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" aria-label="Welcome to Watch Anime 06">
+          <div class="hero-art"></div>
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <div class="hero-eyebrow"><span class="eyebrow-line"></span> YOUR WORLD. YOUR STORIES.</div>
+            <h1>Watch Anime <span>06<span class="hero-period">.</span></span></h1>
+            <p class="hero-lead">A universe of stories awaits.</p>
+            <p class="hero-sub">Discover the anime everyone loves, find something new, and make every story your own.</p>
+            <div class="hero-buttons">
+              <button class="primary-button" data-action="scroll-catalog"><span data-icon="play" data-size="17" data-fill="true"></span> Explore anime</button>
+              <button class="secondary-button" data-action="surprise"><span data-icon="shuffle" data-size="17"></span> Surprise me</button>
+            </div>
+          </div>
+          <button class="scroll-cue" data-action="scroll-catalog">SCROLL TO EXPLORE <span data-icon="arrow-down" data-size="15"></span></button>
+          <div class="hero-index"><span>01</span><div></div><span>03</span></div>
+        </section>
+
+        <section class="trending-section content-wrap" aria-labelledby="trending-heading">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker"><span data-icon="sparkles" data-size="14"></span> THE SPOTLIGHT</p>
+              <h2 id="trending-heading">Trending <em>right now.</em></h2>
+              <p class="section-description">The stories everyone's talking about.</p>
+            </div>
+            <div class="section-controls">
+              <button id="trend-prev" data-action="trend-prev" aria-label="Previous trending anime" disabled><span data-icon="arrow-left" data-size="19"></span></button>
+              <button id="trend-next" data-action="trend-next" aria-label="Next trending anime"><span data-icon="arrow-right" data-size="19"></span></button>
+            </div>
+          </div>
+          <div class="trending-grid" id="trending-grid"></div>
+        </section>
+
+        <section class="catalog-section content-wrap" id="catalog" aria-labelledby="catalog-heading">
+          <div class="catalog-top">
+            <div>
+              <p class="section-kicker"><span class="small-dot"></span> THE COLLECTION</p>
+              <h2 id="catalog-heading">Find your next favorite.</h2>
+              <p class="section-description" id="catalog-description">From all-time classics to your next obsession.</p>
+            </div>
+            <span class="catalog-count" id="catalog-count">0 TITLES</span>
+          </div>
+          <div class="catalog-toolbar">
+            <div class="genre-scroll" id="genre-scroll" aria-label="Filter by genre"></div>
+            <div class="sort-wrap">
+              <span data-icon="sliders" data-size="17"></span>
+              <select id="sort-select" aria-label="Sort anime">
+                <option>Popular</option>
+                <option>Top rated</option>
+                <option>Newest</option>
+                <option>A to Z</option>
+              </select>
+              <span data-icon="chevron-down" data-size="15"></span>
+            </div>
+          </div>
+          <div id="catalog-body"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="content-wrap footer-inner">
+          <div>
+            <button class="brand" data-action="nav" data-view="Discover">
+              <span class="brand-mark" data-icon="play"></span>
+              <span>WATCH<span class="brand-accent">ANIME</span><b>06</b></span>
+            </button>
+            <p>Find a story worth staying up for.</p>
+          </div>
+          <div class="footer-right">
+            <span>Made for the love of anime.</span>
+            <span>Anime data by AniList. Trailers by YouTube.</span>
+          </div>
+        </div>
+      </footer>
+
+      <div id="modal-root"></div>
+    </div>
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
